@@ -41,7 +41,7 @@ public class CheckPermutation {
         for(char c: countChars){
             count[c]++;
         }
-        for (int i = 0; i < s2.length(); i++) {
+        for (int i = 0; i < s2.length(); i++) { // O(n) , two string lengths will be same, if not return false
             int convert = s2.charAt(i);
             count[convert]--;
             if(count[convert] < 0){
