@@ -1,6 +1,6 @@
 package com.company;
 
-public class Main {
+public class IsUnique {
 
  // Question: Implement an algorithm to determine a string has all unique characters, and what if we cannot use additional data structures?
     // solution:
