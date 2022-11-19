@@ -40,6 +40,6 @@ public class URLify {
     public static void main(String[] args) {
         replacePlaces("Mr John Smith    ".toCharArray(), 13);
         replacePlaces("Mr Khang Nguyen Ne Ku        ".toCharArray(),21);
-        
+
     }
 }
