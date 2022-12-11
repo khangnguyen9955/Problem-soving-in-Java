@@ -101,39 +101,151 @@ public class Test1 {
     }
 
 
+    public static int combinationSum4(int[] nums, int target) {
+        if (nums == null || nums.length == 0){
+            return 0;
+        }
+        int [] dp = new int [target+1];
+        Arrays.fill(dp,-1);// fill -1 into arrays
+        dp[0] = 1;  // first index will be 1
+        return dynamicProg(nums,target,dp);
+    }
+
+    public static int dynamicProg(int[] nums, int target, int [] dp){
+        if(target < 0 ) return 0; // zero solution
+        if(dp[target] >=0) return dp[target]; // if exist solution in dp array, return it
+        int count = 0;
+        for (int i  = 0 ;i < nums.length;i++){
+            count+= dynamicProg(nums,target - nums[i], dp);
+        }
+        dp[target]= count;  // assign the solution to dp
+        return count;
+    }
 
 
 
+    class Solution {
+        public static List<List<String>> partition(String s) {
+        List<List<String>> res = new ArrayList<>();
+
+
+            return res;
+        }
+
+
+        public static void backtrack(){
+
+
+
+        }
+
+
+
+        public static boolean isPalindrome(String s,  int start,  int end ){
+            while(start < end){
+                if(s.charAt(start++) != s.charAt(end--)) return false;
+            }
+            return true;
+        }
+    }
+
+        public static int longestConsecutive(int[] nums) {
+            UnionFind uf = new UnionFind(nums.length);
+            Map<Integer,Integer> map = new HashMap<Integer,Integer>();
+            for(int i = 0; i < nums.length;i++){
+                if(map.containsKey(nums[i])){
+                    continue;
+                }
+                map.put(nums[i],i);
+                if(map.containsKey(nums[i]+1)){
+                    uf.union(i,map.get(nums[i]+1));
+                }
+                if(map.containsKey(nums[i]-1)){
+                    uf.union(i,map.get(nums[i]-1));
+                }
+            }
+            return uf.maxUnion();
+        }
+
+    static class UnionFind {
+        private int[] list;
+        private int[] sz;
+
+        public UnionFind(int n) {
+            list = new int[n];
+            sz = new int[n];
+            for (int i = 0; i < n; i++) {
+                list[i] = i;
+                sz[i] = 1;
+            }
+        }
+
+        public int root(int p) {
+            while (p != list[p]) {
+                list[p] = list[list[p]];
+                p = list[p];
+
+            }
+            return p;
+        }
+
+        public boolean connected(int p, int q) {
+            return root(p) == root(q);
+        }
+
+        public void union(int p, int q) {
+            int i = root(p);
+            int j = root(q);
+            if (sz[p] < sz[q]) { // root with number of nodes smaller will be point to root that has larger number of nodes
+                list[i] = j;
+                sz[j] += sz[i];
+            } else {
+                list[j] = i;
+                sz[i] += sz[j];
+            }
+        }
+
+        public int maxUnion() {
+            int[] count = new int[list.length];
+            int max = 0;
+            for (int i = 0; i < list.length; i++) {
+                count[root(i)]++;
+                max = Math.max(max, count[root(i)]);
+            }
+            return max;
+        }
+    }
 
 
 
 
     public static void main(String[] args){
-     Scanner sc = new Scanner(System.in);
-     int n = sc.nextInt();
-     int a =0;
-     int [][] arr = new int[n][3];
-        for (int i = 0; i < n ; i++) {
-            for (int j = 0; j < 3; j++) {
-                arr[i][j] = sc.nextInt();
-            }
-        }
-
-        for (int i = 0; i < n; i++) {
-            int count = 0;
-            for (int j = 0; j < 3; j++) {
-                if(arr[i][j] == 1 ){
-                    count++;
-                }
-                if(count > 1){
-                    a++;
-                    break;
-                }
-
-            }
-        }
-
-        System.out.println(a);
+     longestConsecutive(new int[]{0,3,7,2,5,8,4,6,0,1});
+//     Scanner sc = new Scanner(System.in);
+//     int n = sc.nextInt();
+//     int a =0;
+//     int [][] arr = new int[n][3];
+//        for (int i = 0; i < n ; i++) {
+//            for (int j = 0; j < 3; j++) {
+//                arr[i][j] = sc.nextInt();
+//            }
+//        }
+//
+//        for (int i = 0; i < n; i++) {
+//            int count = 0;
+//            for (int j = 0; j < 3; j++) {
+//                if(arr[i][j] == 1 ){
+//                    count++;
+//                }
+//                if(count > 1){
+//                    a++;
+//                    break;
+//                }
+//
+//            }
+//        }
+    combinationSum4(new int [] {1,2,3},4 );
+//        System.out.println(a);
 
     }
 }

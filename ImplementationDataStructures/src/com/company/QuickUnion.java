@@ -2,6 +2,7 @@ package com.company;
 
 public class QuickUnion {
     private int [] id;
+
     public QuickUnion(int n){
         id = new int [n];
         for (int i = 0; i < n; i++) {
