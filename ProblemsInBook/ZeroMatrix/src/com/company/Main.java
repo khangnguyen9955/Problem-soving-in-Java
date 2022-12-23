@@ -3,6 +3,9 @@ package com.company;
 public class Main {
     // ZeroMatrix: Write an algorithm that if an element in an MxN matrix is 0,
     // its entire row and column are set to 0
+
+    // with this solution, we can reduce the space to O(1) instead of O(MN) of using 2 loops
+
     public static void nullifyCol(int[][]matrix, int col){
         for (int i = 0; i <matrix.length ; i++) {
             matrix[i][col] = 0;
@@ -65,6 +68,6 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        
+
     }
 }
