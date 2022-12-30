@@ -9,7 +9,8 @@ package com.company;
 
 
 
-public class Main {
+public class ZeroAway{
+
 
     public static boolean OneAway(String firstString, String secondString){
         // basically, we do not need to care about the 3 types

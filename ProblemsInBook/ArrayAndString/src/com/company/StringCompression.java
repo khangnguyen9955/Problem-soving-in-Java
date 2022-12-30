@@ -4,7 +4,7 @@ package com.company;
 // of repeated characters. For example, the string "aabcccccaaa" would become a2b1c5a3.
 // if the "compressed" string would not become smaller than the original string, your method should return the original string
 // you can assume the string has only uppercase and lowercase letters (a-z)
-public class Main {
+public class StringCompression{
     public static String compressBad(String str) {
         StringBuilder stringBuilder = new StringBuilder();
         int cnt = 0;
