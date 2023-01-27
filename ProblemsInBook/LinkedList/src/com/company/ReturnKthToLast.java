@@ -42,6 +42,30 @@ public class ReturnKthToLast {
     }
 // This takes O(n) space due to recursive calls
 
+    // Thirdly, we can use iterative approach
+    // this will be more optimal but less straightforward
+    // we will use 2 pointers, p1 and p2
+    // p1 will move kth steps
+    // then p1 and p2 will move as same pace
+    // when p1 hits the end
+    // p2 will be the kth last elements
+
+    RemoveDups.LinkedListNode nthToLast(RemoveDups.LinkedListNode head, int k){
+        RemoveDups.LinkedListNode p1 = head;
+        RemoveDups.LinkedListNode p2 = head;
+        for (int i = 0; i < k ; i++) {
+            if(p1 == null) return null;
+            p1= p1.next;
+        }
+        while(p1 !=null){
+            p1=p1.next;
+            p2=p2.next;
+        }
+
+        return p2;
+    }
+    // This takes O(n) time and O(1) space.
+
     public static void main(String[] args) {
 
     }
