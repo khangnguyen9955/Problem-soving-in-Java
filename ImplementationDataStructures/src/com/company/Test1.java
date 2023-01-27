@@ -122,32 +122,74 @@ public class Test1 {
         return count;
     }
 
+      public static class ListNode {
+          int val;
+          ListNode next;
 
+          ListNode() {
+          }
 
+          ListNode(int val) {
+              this.val = val;
+          }
+
+          ListNode(int val, ListNode next) {
+              this.val = val;
+              this.next = next;
+          }
+      }
     class Solution {
-        public static List<List<String>> partition(String s) {
-        List<List<String>> res = new ArrayList<>();
+        public static ListNode reverseKGroup(ListNode head, int k) {
+            int n = 0;
+            for (ListNode i = head; i != null; n++, i = i.next);
 
+            ListNode dmy = new ListNode(0);
+            dmy.next = head;
+            for(ListNode prev = dmy, tail = head; n >= k; n -= k) {
+                for (int i = 1; i < k; i++) {
+//                    System.out.println("Start");
+                    ListNode next = tail.next.next;
+//                    System.out.println("Next"+ next.val);
+                    tail.next.next = prev.next;
+//                    System.out.println("Tail next next "+ tail.next.next.val);
+                    prev.next = tail.next;
+//                    System.out.println("Prev next"+ prev.next.val);
+                    tail.next = next;
+//                    System.out.println("Tail next"+tail.next.val);
+                    System.out.println("End");
+                }
 
-            return res;
-        }
-
-
-        public static void backtrack(){
-
-
-
-        }
-
-
-
-        public static boolean isPalindrome(String s,  int start,  int end ){
-            while(start < end){
-                if(s.charAt(start++) != s.charAt(end--)) return false;
+                prev = tail;
+                tail = tail.next;
             }
-            return true;
+            return dmy.next;
         }
     }
+
+//    class Solution {
+//        public static List<List<String>> partition(String s) {
+//        List<List<String>> res = new ArrayList<>();
+//
+//
+//            return res;
+//        }
+//
+//
+//        public static void backtrack(){
+//
+//
+//
+//        }
+//
+//
+//
+//        public static boolean isPalindrome(String s,  int start,  int end ){
+//            while(start < end){
+//                if(s.charAt(start++) != s.charAt(end--)) return false;
+//            }
+//            return true;
+//        }
+//    }
 
         public static int longestConsecutive(int[] nums) {
             UnionFind uf = new UnionFind(nums.length);
@@ -220,7 +262,7 @@ public class Test1 {
 
 
     public static void main(String[] args){
-     longestConsecutive(new int[]{0,3,7,2,5,8,4,6,0,1});
+//     longestConsecutive(new int[]{0,3,7,2,5,8,4,6,0,1});
 //     Scanner sc = new Scanner(System.in);
 //     int n = sc.nextInt();
 //     int a =0;
@@ -244,8 +286,14 @@ public class Test1 {
 //
 //            }
 //        }
-    combinationSum4(new int [] {1,2,3},4 );
+//    combinationSum4(new int [] {1,2,3},4 );
 //        System.out.println(a);
+        ListNode head = new ListNode(1);
+        head.next = new ListNode(2);
+        head.next.next = new ListNode(3);
+        head.next.next.next = new ListNode(4);
+        head.next.next.next = new ListNode(5);
+        Solution.reverseKGroup(head,3);
 
     }
 }
