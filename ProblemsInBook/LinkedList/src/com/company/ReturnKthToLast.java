@@ -18,8 +18,29 @@ public class ReturnKthToLast {
         }
         return index;
     }
+    // But this solution is only valid if the interviewer accepts it
 
+    // Secondly, we can create a class Index to wrap the counter value and return it
+    public class Index {
+        public int value = 0;
+    }
+    RemoveDups.LinkedListNode kthToLast (RemoveDups.LinkedListNode head, int k){
+        Index idx = new Index();
+        return kthToLast(head,k,idx);
+    }
 
+    RemoveDups.LinkedListNode kthToLast(RemoveDups.LinkedListNode head, int k ,Index index){
+        if(head==null){
+            return null;
+        }
+        RemoveDups.LinkedListNode node  = kthToLast(head.next,k,index);
+        index.value = index.value+1;
+        if(index.value == k){
+            return head;
+        }
+        return node;
+    }
+// This takes O(n) space due to recursive calls
 
     public static void main(String[] args) {
 
