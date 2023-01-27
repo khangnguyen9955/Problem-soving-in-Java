@@ -28,6 +28,27 @@ public class RemoveDups {
             n = n.next;
         }
     }
+    // This solution takes O(n) time, where N is the number of elements
+    // but this takes O(n) space due to using hash table
+
+    // Follow up: No buffer allowed
+    public static void deleteDupsNoBuffer (LinkedListNode head){
+        LinkedListNode current = head;
+        while (current != null){
+            LinkedListNode runner = current;
+            // check all the rest elements is same with current or not
+            while(runner.next != null){
+                if(runner.next.data == current.data){
+                    runner.next = runner.next.next;
+                }else{
+                    runner = runner.next;
+                }
+            }
+            //checking done
+            current = current.next; // move current
+        }
+    }
+    // This solution will take O(1) space, but will run in O(n^2) time
 
     public static void main(String[] args) {
 	// write your code here
