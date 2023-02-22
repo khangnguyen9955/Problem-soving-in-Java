@@ -58,6 +58,27 @@ public class Practice {
 
     }
 
+    public static int maxArea(int [] height){
+        int maxArea = 0;
+        int left =0;
+        int right = height.length-1;
+        while (left < right){
+            int area = Math.min(height[left],height[right]) * (right-left); // calculate the area
+            // min height[l] or height[r]
+            // cause we can only contain the water as its min height
+            
+            maxArea = Math.max(maxArea, area); // get max so far
+
+            // move 2 pointers
+            if(height[left]<height[right]){
+                left++;
+            }else{
+                right--;
+            }
+        }
+        return maxArea;
+    }
+
 
 
 
