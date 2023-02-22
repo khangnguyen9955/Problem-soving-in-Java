@@ -9,10 +9,15 @@ import java.util.LinkedList;
 public class RemoveDups {
     // Remove Dups: Write code to remove duplicates from an unsorted linked list
     // Follow up: How would you solve this problem if a temporary buffer is not allowed?
-    public class LinkedListNode {
+    public static class LinkedListNode {
         int data;
         LinkedListNode next;
         LinkedListNode previous;
+
+        public LinkedListNode(int i) {
+            this.data = i;
+            this.next = null;
+        }
     }
     public static void deleteDups(LinkedListNode n){
         HashSet<Integer> set = new HashSet<Integer>();
