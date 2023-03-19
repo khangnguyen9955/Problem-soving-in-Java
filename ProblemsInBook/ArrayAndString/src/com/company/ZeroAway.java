@@ -51,6 +51,35 @@ public class ZeroAway{
     }
 
 
+    public boolean oneEditAway(String str1, String str2){
+            if( Math.abs(str1.length() - str2
+                    .length()) > 1){
+                return false;
+            }
+            String s1 = str1.length() < str2.length() ? str1: str2;
+            String s2 = str1.length() > str2.length() ? str1: str2;
+            boolean flag = false;
+            int id1 = 0,id2=0;
+            while (id1< str1.length() && id2 < s2.length()){
+                if(s1.charAt(id1) != s2.charAt(id2)){
+                    if(flag) return false;
+
+                    if(s1.length() == s2.length()){
+                        id1++;
+                    }
+
+                }
+                else{
+                    id1++;
+                }
+                id2++;
+            }
+
+
+                return true;
+    }
+
+
 
 
     public static void main(String[] args) {

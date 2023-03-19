@@ -20,6 +20,20 @@ public class StringCompression{
 
     }
 
+    public String rebuildCompressBad(String str){
+        StringBuilder stringBuilder = new StringBuilder(); // to append char
+        int cnt =0 ;
+        for (int i = 0; i <  str.length(); i++) {
+            cnt++;
+            if(i+1 >= str.length() || str.charAt(i) != str.charAt(i+1)){
+                stringBuilder.append(str.charAt(i)); // add that character
+                stringBuilder.append(cnt); // add counts
+                cnt =0; // reset
+            }
+        }
+        return stringBuilder.length() > str.length() ? str : stringBuilder.toString();
+    }
+
     // improve this problem a little
     // instead of create Stringbuilder and then if this stringbuilder length is larger than the original
     // it is wasteful

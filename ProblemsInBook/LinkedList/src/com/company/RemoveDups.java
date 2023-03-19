@@ -18,6 +18,10 @@ public class RemoveDups {
             this.data = i;
             this.next = null;
         }
+
+        public LinkedListNode() {
+
+        }
     }
     public static void deleteDups(LinkedListNode n){
         HashSet<Integer> set = new HashSet<Integer>();
