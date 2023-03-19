@@ -18,12 +18,21 @@ public class SumList {
         RemoveDups.LinkedListNode next = new RemoveDups.LinkedListNode();
         if(l1!=null || l2 != null){
             // checking null
-            // handle the condition when one linked list is shorter than other
             next = addLists(l1 == null ? null : l1.next, l2 == null ? null : l2.next, value >= 10 ? 1 : 0);
         }
         result.next = next;
 return result;
     }
+    // in the implementation above, we did not handle the case when one linked list is shorter than other
+    // for example 7->1->6
+    // ADD:        5->9
+    // it must be 7 1 6
+    //           +  5 9
+    //              7 5
+    /*
+    Follow Up:
+
+     */
 
 
 
@@ -34,11 +43,15 @@ return result;
         l1.next.next = new RemoveDups.LinkedListNode(6);
         RemoveDups.LinkedListNode l2 = new RemoveDups.LinkedListNode(5);
                 l2.next = new RemoveDups.LinkedListNode(9);
-        l2.next.next = new RemoveDups.LinkedListNode(2);
-        RemoveDups.LinkedListNode result = addLists(l1,l2,0);
-        while(result != null){
-            System.out.println(result.data);
-            result=result.next;
+//        RemoveDups.LinkedListNode result = addLists(l1,l2,0);
+        RemoveDups.LinkedListNode res = PartialSum.addLists(l1,l2);
+        while(res!= null){
+            System.out.println(res.data);
+            res=res.next;
         }
+
+
+
+
     }
 }
