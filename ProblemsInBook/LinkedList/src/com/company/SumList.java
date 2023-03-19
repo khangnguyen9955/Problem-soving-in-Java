@@ -17,16 +17,18 @@ public class SumList {
         result.data = value % 10; // get remainder
         RemoveDups.LinkedListNode next = new RemoveDups.LinkedListNode();
         if(l1!=null || l2 != null){
+            // checking null
+            // handle the condition when one linked list is shorter than other
             next = addLists(l1 == null ? null : l1.next, l2 == null ? null : l2.next, value >= 10 ? 1 : 0);
         }
         result.next = next;
-
 return result;
     }
 
 
 
     public static void main(String[] args) {
+        // TEST
         RemoveDups.LinkedListNode l1 = new RemoveDups.LinkedListNode(7);
         l1.next = new RemoveDups.LinkedListNode(1);
         l1.next.next = new RemoveDups.LinkedListNode(6);
