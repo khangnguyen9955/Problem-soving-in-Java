@@ -258,10 +258,76 @@ public class Test1 {
         }
     }
 
+    public static boolean wordBreak(String s, List<String> wordDict) {
+        Set<String> set = new HashSet<>(wordDict);
+        boolean[] dp = new boolean[s.length() + 1];
+        dp[0] = true;
+        for (int i = 1; i <= s.length(); i++) {
+            for (int j = i - 1; j >= 0; j--) {
+                String log = s.substring(j,i);
+                if (dp[j] && set.contains(s.substring(j, i))) {
+                    dp[i] = true;
+                    break;
+                }
+            }
+        }
+        return dp[s.length()];
+    }
+        // deetcode
+        // worddict: leet, code, eet
+        // e
+
+
+    public static String reverseWords(String s) {
+        Stack<String> stack = new Stack<>();
+        int len = s.length();
+        int index= 0;
+        StringBuilder str = new StringBuilder();
+        for (String a : s.trim().split(" ")) {
+            if (!a.isEmpty())
+                stack.push(a);
+        }
+        while(!stack.isEmpty()) {
+            str.append(stack.pop());
+            str.append(" ");
+        }
+        str.deleteCharAt(str.length()-1);
+
+            return str.toString();
+    }
+
+    public static void rotate(int[] nums, int k) {
+     // every k
+        // swap last num to first
+        // move rest nums to right by 1
+        int len = nums.length;
+//        for(int i = 0 ; i < k ; i++){
+//            // store last num as temp
+//            int tmp = nums[len-1];
+//            // move all to right by 1
+//            for(int j = len -1  ; j >= 1 ; j--){
+//                nums[j] = nums[j-1];
+//            }
+//            nums[0] = tmp;
+//        }
+        int [] test = new int [len+k];
+        for (int i = 0; i < len; i++) {
+            test[i+k] = nums[i];
+        }
+        for (int i = 0; i <test.length ; i++) {
+            nums[i%len] = test[i];
+        }
+
+
+        for (int i = 0; i < len ; i++) {
+            System.out.println(nums[i]);
+        }
+    }
 
 
 
-    public static void main(String[] args){
+
+        public static void main(String[] args){
 //     longestConsecutive(new int[]{0,3,7,2,5,8,4,6,0,1});
 //     Scanner sc = new Scanner(System.in);
 //     int n = sc.nextInt();
@@ -288,12 +354,18 @@ public class Test1 {
 //        }
 //    combinationSum4(new int [] {1,2,3},4 );
 //        System.out.println(a);
-        ListNode head = new ListNode(1);
-        head.next = new ListNode(2);
-        head.next.next = new ListNode(3);
-        head.next.next.next = new ListNode(4);
-        head.next.next.next = new ListNode(5);
-        Solution.reverseKGroup(head,3);
+//        ListNode head = new ListNode(1);
+//        head.next = new ListNode(2);
+//        head.next.next = new ListNode(3);
+//        head.next.next.next = new ListNode(4);
+//        head.next.next.next = new ListNode(5);
+//        Solution.reverseKGroup(head,3);
+//            List<String> list = new ArrayList<>();
+//            list.add("leet");
+//            list.add("code");
+//            wordBreak("leetcode",list);
+            int [] nums = {1,2,3,4,5,6,7};
+            rotate(nums,3);
 
     }
 }
