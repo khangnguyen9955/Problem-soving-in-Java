@@ -3,20 +3,35 @@ public class Main {
         System.out.println("Hello world!");
     }
     class Solution {
-        public int[] productExceptSelf(int[] nums) {
+//        public int[] productExceptSelf(int[] nums) {
+//            int n = nums.length;
+//            int[] res = new int[n];
+//            int prefix = 1;
+//            for (int i = 0; i < n; i++) {
+//                res[i] = prefix;
+//                prefix *= nums[i];
+//            }
+//            int postfix = 1;
+//            for (int i = n -1; i >=0 ; i--) {
+//                res[i] *= postfix;
+//                postfix *= nums[i];
+//            }
+//    return res;
+//        }
+        // sescond approach
+        public int[]productExceptSelf(int[] nums){
             int n = nums.length;
             int[] res = new int[n];
-            int prefix = 1;
-            for (int i = 0; i < n; i++) {
-                res[i] = prefix;
-                prefix *= nums[i];
+            res[0] = 1;
+            for (int i = 1; i < n; i++) {
+                res[i] = res[i-1] * nums[i-1];
             }
-            int postfix = 1;
-            for (int i = n -1; i >=0 ; i--) {
-                res[i] *= postfix;
-                postfix *= nums[i];
+            int right = nums[n-1]; // last element
+            for (int i = n-2; i >= 0; i--) {
+                res[i] *= right;
+                right *= nums[i];
             }
-    return res;
+            return res;
         }
     }
 }
