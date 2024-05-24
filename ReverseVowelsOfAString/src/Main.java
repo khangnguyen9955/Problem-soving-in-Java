@@ -28,5 +28,31 @@ public class Main {
             }
             return new String(chars);
         }
+        // second approach using 2 pointers
+        // public String reverseVowels(String s){
+        //     int start = 0;
+        //     int end = s.length() - 1;
+        //     char[] chars = s.toCharArray();
+        //     Set<Character> vowelSet = new HashSet<>(Arrays.asList('A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u'));
+        //     while(start < end ){
+        //         // find the vowel from the left
+        //         while(start<end && !vowelSet.contains(chars[start])){
+        //             start++;
+        //         }
+
+        //         // find the vowel from the right
+        //         while(start < end && !vowelSet.contains(chars[end]) ){
+        //             end--;
+        //         }
+        //         // foudn the vowel => swap it
+        //         char temp = chars[start];
+        //         chars[start] = chars[end];
+        //         chars[end] = temp;
+        //         // move
+        //         start++;
+        //         end--;
+        //     }
+        //     return new String(chars);
+        // }
     }
 }
