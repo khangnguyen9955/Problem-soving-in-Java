@@ -3,19 +3,25 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AddBinary/AddBinary.iml" filepath="$PROJECT_DIR$/AddBinary/AddBinary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CanPlaceFlowers/CanPlaceFlowers.iml" filepath="$PROJECT_DIR$/CanPlaceFlowers/CanPlaceFlowers.iml" />
       <module fileurl="file://$PROJECT_DIR$/ClimbingStairs/ClimbingStairs.iml" filepath="$PROJECT_DIR$/ClimbingStairs/ClimbingStairs.iml" />
       <module fileurl="file://$PROJECT_DIR$/FirstUniqueCharacterInAString/FirstUniqueCharacterInAString.iml" filepath="$PROJECT_DIR$/FirstUniqueCharacterInAString/FirstUniqueCharacterInAString.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Leetcode.iml" filepath="$PROJECT_DIR$/.idea/Leetcode.iml" />
       <module fileurl="file://$PROJECT_DIR$/MaximumProductSubArray/MaximumProductSubArray.iml" filepath="$PROJECT_DIR$/MaximumProductSubArray/MaximumProductSubArray.iml" />
       <module fileurl="file://$PROJECT_DIR$/MedianOfTwoSortedArray/MedianOfTwoSortedArray.iml" filepath="$PROJECT_DIR$/MedianOfTwoSortedArray/MedianOfTwoSortedArray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MoveZeroes/MoveZeroes.iml" filepath="$PROJECT_DIR$/MoveZeroes/MoveZeroes.iml" />
       <module fileurl="file://$PROJECT_DIR$/Pascal's Triangle II/Pascal's Triangle II.iml" filepath="$PROJECT_DIR$/Pascal's Triangle II/Pascal's Triangle II.iml" />
       <module fileurl="file://$PROJECT_DIR$/PlusOne/PlusOne.iml" filepath="$PROJECT_DIR$/PlusOne/PlusOne.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProductOfArrayExceptSelf/ProductOfArrayExceptSelf.iml" filepath="$PROJECT_DIR$/ProductOfArrayExceptSelf/ProductOfArrayExceptSelf.iml" />
       <module fileurl="file://$PROJECT_DIR$/RansomNote/RansomNote.iml" filepath="$PROJECT_DIR$/RansomNote/RansomNote.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ReverseVowelsOfAString/ReverseVowelsOfAString.iml" filepath="$PROJECT_DIR$/ReverseVowelsOfAString/ReverseVowelsOfAString.iml" />
       <module fileurl="file://$PROJECT_DIR$/SearchA2DMatrix/SearchA2DMatrix.iml" filepath="$PROJECT_DIR$/SearchA2DMatrix/SearchA2DMatrix.iml" />
       <module fileurl="file://$PROJECT_DIR$/Sqrt(x)/Sqrt(x).iml" filepath="$PROJECT_DIR$/Sqrt(x)/Sqrt(x).iml" />
+      <module fileurl="file://$PROJECT_DIR$/StringCompression/StringCompression.iml" filepath="$PROJECT_DIR$/StringCompression/StringCompression.iml" />
       <module fileurl="file://$PROJECT_DIR$/SudokuValid/SudokuValid.iml" filepath="$PROJECT_DIR$/SudokuValid/SudokuValid.iml" />
       <module fileurl="file://$PROJECT_DIR$/Triangle's Pascal/Triangle's Pascal.iml" filepath="$PROJECT_DIR$/Triangle's Pascal/Triangle's Pascal.iml" />
       <module fileurl="file://$PROJECT_DIR$/TwoSum/TwoSum.iml" filepath="$PROJECT_DIR$/TwoSum/TwoSum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kidsWithCandies/kidsWithCandies.iml" filepath="$PROJECT_DIR$/kidsWithCandies/kidsWithCandies.iml" />
     </modules>
   </component>
 </project>
