@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/Leetcode.iml" filepath="$PROJECT_DIR$/.idea/Leetcode.iml" />
       <module fileurl="file://$PROJECT_DIR$/MaxNumbersOfKSumPairs/MaxNumbersOfKSumPairs.iml" filepath="$PROJECT_DIR$/MaxNumbersOfKSumPairs/MaxNumbersOfKSumPairs.iml" />
       <module fileurl="file://$PROJECT_DIR$/MaximumProductSubArray/MaximumProductSubArray.iml" filepath="$PROJECT_DIR$/MaximumProductSubArray/MaximumProductSubArray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MaxiumAverageSubArray1/MaxiumAverageSubArray1.iml" filepath="$PROJECT_DIR$/MaxiumAverageSubArray1/MaxiumAverageSubArray1.iml" />
       <module fileurl="file://$PROJECT_DIR$/MedianOfTwoSortedArray/MedianOfTwoSortedArray.iml" filepath="$PROJECT_DIR$/MedianOfTwoSortedArray/MedianOfTwoSortedArray.iml" />
       <module fileurl="file://$PROJECT_DIR$/MoveZeroes/MoveZeroes.iml" filepath="$PROJECT_DIR$/MoveZeroes/MoveZeroes.iml" />
       <module fileurl="file://$PROJECT_DIR$/Pascal's Triangle II/Pascal's Triangle II.iml" filepath="$PROJECT_DIR$/Pascal's Triangle II/Pascal's Triangle II.iml" />
