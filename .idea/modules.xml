@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/CanPlaceFlowers/CanPlaceFlowers.iml" filepath="$PROJECT_DIR$/CanPlaceFlowers/CanPlaceFlowers.iml" />
       <module fileurl="file://$PROJECT_DIR$/ClimbingStairs/ClimbingStairs.iml" filepath="$PROJECT_DIR$/ClimbingStairs/ClimbingStairs.iml" />
       <module fileurl="file://$PROJECT_DIR$/ContainerWithMostWater/ContainerWithMostWater.iml" filepath="$PROJECT_DIR$/ContainerWithMostWater/ContainerWithMostWater.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FindTheHighestAltitude/FindTheHighestAltitude.iml" filepath="$PROJECT_DIR$/FindTheHighestAltitude/FindTheHighestAltitude.iml" />
       <module fileurl="file://$PROJECT_DIR$/FirstUniqueCharacterInAString/FirstUniqueCharacterInAString.iml" filepath="$PROJECT_DIR$/FirstUniqueCharacterInAString/FirstUniqueCharacterInAString.iml" />
       <module fileurl="file://$PROJECT_DIR$/IsSubsequence/IsSubsequence.iml" filepath="$PROJECT_DIR$/IsSubsequence/IsSubsequence.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Leetcode.iml" filepath="$PROJECT_DIR$/.idea/Leetcode.iml" />
